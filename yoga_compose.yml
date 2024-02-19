@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: yoga_mongodb2
+    networks:
+      - yoga_network
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ayalat
+      MONGO_INITDB_ROOT_PASSWORD: Aa123456
+    command: --auth
+
+  backend:
+    build:
+      context: ./yoga_backend
+    image: backend-image
+    container_name: my-backend-container2
+    networks:
+      - yoga_network
+    ports:
+      - "8001:8001"
+    depends_on:
+      - mongodb
+
+  updatedb:
+    build:
+      context: ./yoga_db
+    image: yoga-db-image
+    container_name: update-db-container
+    networks:
+      - yoga_network
+    depends_on:
+      - mongodb
+
+networks:
+  yoga_network:
