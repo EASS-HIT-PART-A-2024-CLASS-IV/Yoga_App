@@ -1,6 +1,5 @@
 from pymongo import MongoClient
 from datetime import datetime
-import json
 import re
 
 client = MongoClient("mongodb://ayalat:Aa123456@yoga_mongodb2:27017")

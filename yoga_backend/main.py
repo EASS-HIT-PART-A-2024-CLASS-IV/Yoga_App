@@ -18,11 +18,12 @@ def login_endpoint(request: UserLoginOrRegistrationRequest):
 @app.post('/v1/Register')
 def register_endpoint(request: UserLoginOrRegistrationRequest):
     try:
-       result = user_registration(request.username,request.password)
-       return {"Message": result}
+        result = user_registration(request.username, request.password)
+        return {"Message": result}
     except Exception as e:
+        print(f"Error during registration: {e}")
         raise HTTPException(status_code=500, detail="Error")
-    
+
 @app.post('/v1/ClassesPerName')
 def find_classes_per_name_endpoint(request: ClassNameRequest):
     try:

@@ -35,5 +35,18 @@ services:
     depends_on:
       - mongodb
 
+  frontend:
+    build:
+      context: ./yoga_frontend
+    image: frontend-image
+    container_name: my-frontend-container
+    networks:
+      - yoga_network
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+      - mongodb
+
 networks:
   yoga_network:
