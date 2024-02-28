@@ -69,6 +69,9 @@ def show_search_options(column):
                 st.session_state["result"+ search_option] = perform_search_by_name(search_input)
     if column.button("Log out"):
         del st.session_state.user_authenticated
+        st.session_state["resultBy Day"] = None
+        st.session_state["resultBy Time"] = None
+        st.session_state["resultBy Name"] = None
         st.rerun()
 
     display_classes(search_input, st.session_state.get("result"+search_option))
