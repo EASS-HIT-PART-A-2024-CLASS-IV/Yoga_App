@@ -41,19 +41,13 @@ Welcome to Yoga Website, your go-to application for managing yoga classes effort
    ```bash
    docker-compose -f yoga_compose.yml up -d
    ```
+## Demo
 
-### Backend Tests
-1. **Access the Backend Container:**
-   ```bash
-   docker exec -it my-backend-container2 bash
-   ```
-2. **Run the tests:**
-   ```bash
-   pytest backend_tests.py
-   ```
-### Accessing the Application
+Check out the [YouTube video](https://youtu.be/9d_aAwZwxbM?si=NVyql1aEadeKWMRx) for a demo.
 
-Once the Docker container is up and running, access to Yoga website by visiting [http://localhost:8001](http://localhost:8001) in your web browser.
+## Accessing the Application
+
+Once the Docker container is up and running, access to Yoga website by visiting [http://localhost:8501](http://localhost:8501) in your web browser.
 
 Feel free to explore and manage your yoga classes seamlessly! 🧘‍♀️🌟
 
