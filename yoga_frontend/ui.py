@@ -92,12 +92,18 @@ def display_classes(search_value, classes):
         register_button_key = f"register_button_{class_info['classname']}_{class_info['day']}_{class_info['start_time']}_{class_info['end_time']}"
         if st.button("Register", key=register_button_key):
             res=perform_register_to_class(class_info['classname'], class_info['day'], class_info['start_time'], class_info['end_time'], st.session_state.username)
-            st.write(res)
+            if "is already" in res:
+                st.info(res)
+            else:
+                st.success(res)
 
         unregister_button_key = f"unregister_button_{class_info['classname']}_{class_info['day']}_{class_info['start_time']}_{class_info['end_time']}"
         if st.button("Unregister", key=unregister_button_key):
             res=perform_unregister_from_class(class_info['classname'], class_info['day'], class_info['start_time'], class_info['end_time'], st.session_state.username)
-            st.write(res)
+            if "is not registered" in res:
+                st.info(res)
+            else:
+                st.success(res)
 
 if __name__ == "__main__":
     main()
