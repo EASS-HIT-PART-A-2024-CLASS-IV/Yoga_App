@@ -41,9 +41,6 @@ Welcome to Yoga Website, your go-to application for managing yoga classes effort
    ```bash
    docker-compose -f yoga_compose.yml up -d
    ```
-## Demo
-
-Check out the [YouTube video](https://youtu.be/9d_aAwZwxbM?si=NVyql1aEadeKWMRx) for a demo.
 
 ## Accessing the Application
 
@@ -52,3 +49,7 @@ Once the Docker container is up and running, access to Yoga website by visiting 
 Feel free to explore and manage your yoga classes seamlessly! 🧘‍♀️🌟
 
 For more details, issues, or contributions, please check out our [GitHub repository](https://github.com/EASS-HIT-PART-A-2022-CLASS-III/Yoga_App).
+
+## Demo
+
+Check out the [YouTube video](https://youtu.be/9d_aAwZwxbM?si=NVyql1aEadeKWMRx) for a demo.
